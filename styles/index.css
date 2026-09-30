@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+@keyframes bordaArcoIris {
+  0%   { border-color: #ff0000; } /* Vermelho */
+  16%  { border-color: #ff7f00; } /* Laranja */
+  33%  { border-color: #ffff00; } /* Amarelo */
+  50%  { border-color: #00ff00; } /* Verde */
+  66%  { border-color: #0000ff; } /* Azul */
+  83%  { border-color: #4b0082; } /* Índigo */
+  100% { border-color: #ff0000; } /* Volta pro Vermelho */
+}
+
+@keyframes outlineArcoIris {
+    0%   { outline-color: #ff0000; } /* Vermelho */
+    16%  { outline-color: #ff7f00; } /* Laranja */
+    33%  { outline-color: #ffff00; } /* Amarelo */
+    50%  { outline-color: #00ff00; } /* Verde */
+    66%  { outline-color: #0000ff; } /* Azul */
+    83%  { outline-color: #4b0082; } /* Índigo */
+    95%  { outline-color: #ee82ee; } /* Rosa  */
+    100% { outline-color: #ff0000; } /* Volta pro Vermelho */
+
+}
+
+@keyframes pulsoVermelho {
+    0%   { border-color: #ff0000; }
+    50%  { border-color: #000000; }
+    100% { border-color: #ff0000; }
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    background: lightgray url("../images/background2.jpg") no-repeat top right/cover;
+
+}
+
+main {
+    width: 100%;
+
+}
+
+section#inmic {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+
+}
+
+section#inmic #sobre {
+    width: 70%;
+    padding: 20px;
+    margin: 10px 0px;
+
+}
+
+section#inmic .funcionarios {
+    width: 100%;
+
+    margin: 20px 0px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+section#inmic .funcionarios .pessoas {
+    width: 300px;
+    min-height: 250px;
+    
+    margin: 100px 0px;
+
+    font-weight: bold;
+
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+
+    box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.5);
+
+}
+
+section#inmic .funcionarios .border-lgbt {
+    animation: bordaArcoIris 4s linear infinite;
+
+}
+
+section#inmic .funcionarios .outline-lgbt {
+    animation: outlineArcoIris 4s linear infinite;
+
+}
+
+section#inmic .funcionarios .vermelhos {
+    animation: pulsoVermelho 1.5s ease-in-out infinite;
+
+}
+
+div.funcionarios .pessoas .img-perfil {
+    position: relative;
+    width: 100%;
+    height: 62.5px;
+
+    border-radius: 20px 20px 0px 0px;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+div.funcionarios .pessoas .img-perfil .imagem {
+    position: absolute;
+    width: 40%;
+    height: 100px;
+
+    outline: 2px solid black;
+    border: 2px solid transparent;
+    border-radius: 50%;
+
+    top: -35px;
+
+}
+
+div.funcionarios .pessoas .img-perfil .imagem img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    border-radius: 50%;
+
+}
+
+div.funcionarios .pessoas .nomes, .pronomes {
+    width: 100%;
+    height: 63px;
+    line-height: 63px;
+    text-align: center;
+
+}
+
+div.funcionarios .pessoas .descricoes {
+    width: 100%;
+    padding: 10px;
+    
+    text-align: center;
+
+    border-radius: 0px 0px 20px 20px;
+
+    overflow: hidden;
+
+}
+
+div.funcionarios .pessoas .descricoes a {
+    text-decoration: none;
+    color: black;
+
+}
+span {
+    color: red;
+
+}
+
+div.funcionarios .pessoas .descricoes a:hover {
+    color: red;
+
+}
+
+div.funcionarios .pessoas .descricoes #txt {
+    width: 99%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media screen and (max-width: 680px) {
+     section#inmic #sobre {
+        width: 90%;
+
+     }
+}
+
+@media screen and (min-width: 680px) {
+    section#inmic .funcionarios .pessoas{
+        margin: 50px;
+
+    }
+}
